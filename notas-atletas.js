@@ -19,7 +19,7 @@ let atletas = [
 
 function mediasAtletas(atletas) {
     atletas.forEach(atleta => {
-        let notasOrdenadas = atleta.notas.slice().sort((a, b) => a - b);
+        let notasOrdenadas = atleta.notas.sort((a, b) => a - b);
         let notasValidas = notasOrdenadas.slice(1, -1);
         let soma = notasValidas.reduce((a, v) => a + v, 0);
         let media = soma / notasValidas.length;
